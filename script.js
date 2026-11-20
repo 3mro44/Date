@@ -1,3 +1,13 @@
+// Preloader Logic
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add('hide');
+    }, 1650);
+  }
+});
+
 // Elements
 const mainCard = document.getElementById('mainCard');
 const progressFill = document.getElementById('progressFill');
