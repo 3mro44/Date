@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Tiny Ask — يلا نخرج؟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="cream">
+
+  <!-- Top Bar: Badge + Theme Switcher -->
+  <div class="top-controls">
+    <div class="top-badge">
+      <span class="dot"></span>
+      <span>يلا نخرج ؟</span>
+    </div>
+
+    <div class="theme-switcher" title="تغيير الألوان">
+      <button type="button" class="theme-dot active" data-set-theme="cream" style="background:#ebe6dd;" aria-label="Cream Theme"></button>
+      <button type="button" class="theme-dot" data-set-theme="rose" style="background:#f7dce0;" aria-label="Rose Theme"></button>
+      <button type="button" class="theme-dot" data-set-theme="midnight" style="background:#1c1b29;" aria-label="Midnight Theme"></button>
+    </div>
+  </div>
+
+  <main class="card" id="mainCard">
+    <!-- Top Progress Line -->
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Dodge counter -->
+    <div class="dodge-badge" id="dodgeBadge">1 dodge</div>
+
+    <!-- SCREEN 1: THE ASK -->
+    <section class="screen active" id="screen1">
+      <div class="eyebrow">A Tiny Ask</div>
+      <h1>Will you go<br><em>out</em> with me?</h1>
+      <p class="subtitle" id="askSubtitle">Catch No if you can.</p>
+
+      <div class="flower-wrap" id="flowerWrap">
+        <svg class="flower-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 100 C75 55, 95 20, 115 35 C135 50, 120 85, 100 100 Z" fill="var(--petal-color)" fill-opacity="0.75" stroke="var(--petal-stroke)" stroke-width="1.2"/>
+          <path d="M100 100 C140 65, 175 85, 165 108 C155 130, 120 115, 100 100 Z" fill="var(--petal-color)" fill-opacity="0.75" stroke="var(--petal-stroke)" stroke-width="1.2"/>
+          <path d="M100 100 C135 140, 115 175, 92 165 C70 155, 85 120, 100 100 Z" fill="var(--petal-color)" fill-opacity="0.75" stroke="var(--petal-stroke)" stroke-width="1.2"/>
+          <path d="M100 100 C60 135, 25 115, 35 92 C45 70, 80 85, 100 100 Z" fill="var(--petal-color)" fill-opacity="0.75" stroke="var(--petal-stroke)" stroke-width="1.2"/>
+          <path d="M100 100 C65 65, 45 40, 68 30 C90 20, 95 65, 100 100 Z" fill="var(--petal-color)" fill-opacity="0.65" stroke="var(--petal-stroke)" stroke-width="1.2"/>
+          <path d="M100 105 C115 125, 122 148, 106 155 C90 162, 92 130, 100 105 Z" fill="#a8c398" fill-opacity="0.88" stroke="#6c8c5a" stroke-width="1.2"/>
+          <circle cx="100" cy="100" r="6" fill="var(--accent-red)"/>
+        </svg>
+      </div>
+
+      <div class="buttons-arena" id="arena">
+        <button class="btn-yes pulse-anim" id="yesBtn">YES ♥</button>
+        <button class="btn-no" id="noBtn">No</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: YAY -->
+    <section class="screen" id="screen2">
+      <div class="pill-confirmed">DATE CONFIRMED</div>
+      <h1 class="ar-title">كنت عارف انك هتوافقي</h1>
+
+      <div class="flower-wrap">
+        <svg class="flower-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 100 C75 55, 95 20, 115 35 C135 50, 120 85, 100 100 Z" fill="var(--petal-color)" fill-opacity="0.85" stroke="var(--petal-stroke)" stroke-width="1.2"/>
+          <path d="M100 100 C140 65, 175 85, 165 108 C155 130, 120 115, 100 100 Z" fill="var(--petal-color)" fill-opacity="0.85" stroke="var(--petal-stroke)" stroke-width="1.2"/>
+          <path d="M100 100 C135 140, 115 175, 92 165 C70 155, 85 120, 100 100 Z" fill="var(--petal-color)" fill-opacity="0.85" stroke="var(--petal-stroke)" stroke-width="1.2"/>
+          <path d="M100 100 C60 135, 25 115, 35 92 C45 70, 80 85, 100 100 Z" fill="var(--petal-color)" fill-opacity="0.85" stroke="var(--petal-stroke)" stroke-width="1.2"/>
+          <path d="M100 100 C65 65, 45 40, 68 30 C90 20, 95 65, 100 100 Z" fill="var(--petal-color)" fill-opacity="0.75" stroke="var(--petal-stroke)" stroke-width="1.2"/>
+          <path d="M100 105 C115 125, 122 148, 106 155 C90 162, 92 130, 100 105 Z" fill="#a8c398" fill-opacity="0.9" stroke="#6c8c5a" stroke-width="1.2"/>
+          <circle cx="100" cy="100" r="6" fill="var(--accent-red)"/>
+        </svg>
+      </div>
+
+      <p class="subtitle">حبك بااان ♥</p>
+      <button class="btn-red" id="toPlanBtn">يلا بيناا → 💌</button>
+    </section>
+
+    <!-- SCREEN 3: PICK TIME & PLAN (TODAY LOCKED) -->
+    <section class="screen" id="screen3">
+      <div class="eyebrow">Let's Make It Official</div>
+      <h1>Pick the <em>time</em><br>&amp; plan</h1>
+
+      <!-- Locked Today Display -->
+      <div class="locked-date-box">
+        <span class="locked-label">📅 When:</span>
+        <span class="locked-value" id="todayDisplay">Today</span>
+        <span class="lock-icon">🔒</span>
+      </div>
+
+      <!-- Fixed Time Slots -->
+      <div class="plan-label">هتبقي جاهزه الساعه كام بقا</div>
+      <div class="times-wrap" id="timesWrap">
+        <button type="button" class="time-chip" data-time="6:30 PM">🕡 6:30 PM</button>
+        <button type="button" class="time-chip" data-time="7:00 PM">🕖 7:00 PM</button>
+        <button type="button" class="time-chip" data-time="7:30 PM">🕢 7:30 PM</button>
+        <button type="button" class="time-chip" data-time="8:30 PM">🕣 8:30 PM</button>
+      </div>
+
+      <!-- Plan Options -->
+      <div class="plan-label">هنروح فين؟</div>
+      <div class="plans-wrap" id="plansWrap">
+        <button type="button" class="plan-chip" data-plan="Aura" data-emoji="☕">☕ Aura</button>
+        <button type="button" class="plan-chip" data-plan="chuchinaa" data-emoji="🌳">🌳 chuchinaa</button>
+        <button type="button" class="plan-chip" data-plan="Puffy" data-emoji="🍝">🍝 Puffy</button>
+        <button type="button" class="plan-chip" data-plan="لفة و نجيب اكل" data-emoji="🍔">🍔 لفة و نجيب اكل</button>
+        <button type="button" class="plan-chip" data-plan="اي حاجه تانيه علي مذاجك" data-emoji="🎁">🎁 اي حاجه تانيه علي مذاجك</button>
+      </div>
+
+      <!-- Optional Note Input -->
+      <div class="note-wrap">
+        <input type="text" id="customNote" placeholder="لو في مكان معين في دماغك اكتبيه هنا... (اختياري)" dir="rtl" />
+      </div>
+
+      <button class="btn-seal" id="sealBtn" disabled>اختاري الوقت والمكان الأول ✍️</button>
+    </section>
+
+    <!-- SCREEN 4: FINAL LETTER -->
+    <section class="screen" id="screen4">
+      <div class="eyebrow">A Little Letter For You</div>
+
+      <div class="summary-pills">
+        <span class="summary-pill" id="summaryDate">📅 Today</span>
+        <span class="summary-pill" id="summaryTime">🕒 Time</span>
+        <span class="summary-pill" id="summaryPlan">🍷 Plan</span>
+      </div>
+
+      <div class="letter-box" dir="rtl">
+        <div class="wax-seal">♥</div>
+        <p class="letter-salutation">♥حبوبتي،</p>
+        <p id="letterNote" class="letter-note-text" style="display:none;"></p>
+        <p>مفيش تردد هو هننزل نفك شويه و كله هيبقي تماام.</p>
+        <p>يلا بقاا متاخريش عليا عشان وحشاني  .</p>
+        <p class="letter-sign">بحبك ♥</p>
+      </div>
+
+      <div class="final-actions">
+        <button class="btn-whatsapp" id="whatsappBtn">ابعتيلي الاختيار واتساب 💬</button>
+        <button class="btn-copy" id="shareBtn">نسخ الرسالة 📋</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">تم النسخ! ابعتيهالي بقا 💌</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
